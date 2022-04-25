@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: echo ${{ secrets.CHECKMARX_USERNAME }} Hello, world!
+        run: echo ${{ secrets.CHECKMARX_USER }} Hello, world!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
@@ -44,7 +44,7 @@ jobs:
           project: ${{ github.repository }}-PR
           team: "/CxServer/Team1/Team2"
           checkmarx_url: http://1a48-3-83-175-182.ngrok.io   # To be stored in GitHub Secrets.
-          checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}
+          checkmarx_username: ${{ secrets.CHECKMARX_USER }}
           checkmarx_password: KsHPJ8JCD5otOLixmMov_ 
           checkmarx_client_secret: 014DF517-39D1-4453-B7B3-9930C563627C
           github_token: ${{secrets.GITHUB_TOKEN}}
