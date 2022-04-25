@@ -51,12 +51,15 @@ jobs:
           incremental: false
           break_build: false
           scanners: sast
-          bug_tracker: GitHub # Valida values: GitHub (for PUll as GH Issues), GITHUBPULL (for PR as comments in PR ), Sarif (GitHub’s Security Tab)
+          bug_tracker: Sarif # Valida values: GitHub (for PUll as GH Issues), GITHUBPULL (for PR as comments in PR ), Sarif (GitHub’s Security Tab)
           params: --namespace=${{ github.repository_owner }} \
                   --repo-name=${{ github.event.repository.name }} \
                   --branch=${{ github.head_ref }} \
                   --merge-id=${{ github.event.number }} \
                   --cx-flow.filterSeverity --cx-flow.filterCategory \
                   --cx-flow.thresholds.high=0 --cx-flow.thresholds.medium=1
-                  
 
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v1
+        with:
+          sarif_file: cx.sarif
