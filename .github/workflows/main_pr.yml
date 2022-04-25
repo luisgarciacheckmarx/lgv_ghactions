@@ -51,7 +51,7 @@ jobs:
           incremental: false
           break_build: false
           scanners: sast
-          bug_tracker: GITHUBPULL # Valida values: GitHub (for PUll as GH Issues), GITHUBPULL (for PR as comments in PR ), Sarif (GitHub’s Security Tab)
+          bug_tracker: GitHub # Valida values: GitHub (for PUll as GH Issues), GITHUBPULL (for PR as comments in PR ), Sarif (GitHub’s Security Tab)
           params: --namespace=${{ github.repository_owner }} \
                   --repo-name=${{ github.event.repository.name }} \
                   --branch=${{ github.head_ref }} \
