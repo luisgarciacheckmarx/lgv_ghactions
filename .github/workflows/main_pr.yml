@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
       
       ####################################
-      # Runs a CxSAST scan through CxFlow
+      # Runs a CxSAST scan through CxFlow 
       ####################################
       - name: Checkmarx CxFlow Action
         uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4
