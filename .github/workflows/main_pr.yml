@@ -48,10 +48,13 @@ jobs:
           checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}  # To be stored in GitHub Secrets.
           checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }} # To be stored in GitHub Secrets.
           github_token: ${{secrets.GITHUB_TOKEN}}
-          incremental: true
+          incremental: false
           break_build: false
           scanners: sast
           bug_tracker: GITHUBPULL # Valida values: GitHub (for PUll as GH Issues), GITHUBPULL (for PR as comments in PR ), Sarif (GitHub’s Security Tab)
           params: --namespace=${{ github.repository_owner }} \
-                  --repo-name=${{ github.event.repository.name }} --branch=${{ github.head_ref }} --merge-id=${{ github.event.number }} --cx-flow.filterSeverity --cx-flow.filterCategory
+                  --repo-name=${{ github.event.repository.name }} \
+                  --branch=${{ github.head_ref }} \
+                  --merge-id=${{ github.event.number }} \
+                  --cx-flow.filterSeverity --cx-flow.filterCategory
 
