@@ -47,7 +47,7 @@ jobs:
           checkmarx_username: ${{ secrets.CHECKMARX_USERNAME }}  # To be stored in GitHub Secrets.
           checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}  # To be stored in GitHub Secrets.
           checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }}  # To be stored in GitHub Secrets.
-          github_token: ${{secrets.GITHUB_TOKEN}} # GitHub API Token
+          github_token: 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 # ${{secrets.GITHUB_TOKEN}} GitHub API Token
           incremental: true
           break_build: false
           scanners: sast
