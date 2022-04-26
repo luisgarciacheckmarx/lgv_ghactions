@@ -43,7 +43,7 @@ jobs:
         with:
           project: ${{ github.repository }}-PR
           team: "/CxServer/Team1/Team2"
-          checkmarx_url: http://1a48-3-83-175-182.ngrok.io   # To be stored in GitHub Secrets.
+          checkmarx_url: http://febb-3-83-175-182.ngrok.io   # To be stored in GitHub Secrets.
           checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
           checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}  # To be stored in GitHub Secrets.
           checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }} # To be stored in GitHub Secrets.
