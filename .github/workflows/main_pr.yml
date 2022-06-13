@@ -42,7 +42,7 @@ jobs:
         uses: checkmarx-ts/checkmarx-cxflow-github-action@v1.4
         with:
           project: ${{ github.repository }}-PR
-          team: "/CxServer/Team1/Team2"
+          team: "/CxServer/Team1/Team3"
           checkmarx_url: http://4eaf-3-83-175-182.ngrok.io   # To be stored in GitHub Secrets.
           checkmarx_username: ${{ secrets.CHECKMARX_USER }} # To be stored in GitHub Secrets.
           checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}  # To be stored in GitHub Secrets.
