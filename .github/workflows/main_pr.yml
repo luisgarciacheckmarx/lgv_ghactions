@@ -48,6 +48,12 @@ jobs:
           checkmarx_password: ${{ secrets.CHECKMARX_PASSWORD }}  # To be stored in GitHub Secrets.
           checkmarx_client_secret: ${{ secrets.CHECKMARX_CLIENT_SECRET }} # To be stored in GitHub Secrets.
           github_token: ${{secrets.GITHUB_TOKEN}}
+          sca_api_url: https://api-sca.checkmarx.net
+          sca_app_url: https://sca.checkmarx.net
+          sca_access_control_url: https://platform.checkmarx.net
+          sca_tenant: ps-team-emea
+          sca_username: ${{ secrets.SCA_USERNAME }}
+          sca_password: ${{ secrets.SCA_PASSWORD }}
           incremental: false
           break_build: false
           scanners: sast
