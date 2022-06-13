@@ -56,7 +56,7 @@ jobs:
           sca_password: ${{ secrets.SCA_PASSWORD }}
           incremental: false
           break_build: false
-          scanners: sast
+          scanners: sast, sca
           bug_tracker: GITHUBPULL # Valida values: GitHub (for PUll as GH Issues), GITHUBPULL (for PR as comments in PR ), Sarif (GitHub’s Security Tab)
           params: --namespace=${{ github.repository_owner }} \
                   --repo-name=${{ github.event.repository.name }} \
