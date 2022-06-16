@@ -62,7 +62,7 @@ jobs:
                   --repo-name=${{ github.event.repository.name }} \
                   --branch=${{ github.head_ref }} \
                   --merge-id=${{ github.event.number }} \
-                  --cx-flow.zip-exclude="\.git/.*, mvn/.*, .*\.png" \
+                  --cx-flow.zip-exclude="mvn/.*" \
                   --logging.level.com.checkmarx=DEBUG \
                   --cx-flow.filterSeverity --cx-flow.filterCategory \
                   --cx-flow.thresholds.high=0 --cx-flow.thresholds.medium=1
